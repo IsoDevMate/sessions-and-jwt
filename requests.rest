@@ -1,0 +1,12 @@
+
+GET http://localhost:5003/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWtlIiwiaWF0IjoxNjg1ODk2NjAyfQ.gnirVF70tDQUVYlwcI9x4RJeSbVIXVjYjFv3rd2h5pE
+
+###
+
+POST http://localhost:5003/login
+Content-Type: application/json
+
+{
+    "username": "ake"
+}
