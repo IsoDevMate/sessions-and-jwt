@@ -1,12 +1,21 @@
 
 GET http://localhost:5003/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWtlIiwiaWF0IjoxNjg1ODk2NjAyfQ.gnirVF70tDQUVYlwcI9x4RJeSbVIXVjYjFv3rd2h5pE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYmFybyIsImlhdCI6MTY4NTk0NTc5NSwiZXhwIjoxNjg1OTQ1ODEwfQ.MquN-x-ZQ1aZZbDacfEhbVaQRkQducmpevr4SKD9P1g
 
 ###
 
-POST http://localhost:5003/login
+POST  http://localhost:5004/token
+Content-Type: application/json
+{
+    "token":
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYmFybyIsImlhdCI6MTY4NTk0Njg3OH0.z-Xz6J8ucg0oww1CRhnc-YMDevKPI4jXZ2KtiPRnYS0
+    "
+}
+###
+
+POST http://localhost:5004/login
 Content-Type: application/json
 
 {
-    "username": "ake"
+    "username": "baro"
 }
