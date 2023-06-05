@@ -17,7 +17,7 @@ app.listen(port, ()=>{
     console.log(`server is running on port ${port}`)
 })
 
-let refreshToken = []
+let refreshTokens = []
 
 // authenticateToken passed as a middleware function
 app.post('/token',(req,res)=>{
@@ -41,15 +41,20 @@ const user ={name: username}
 const accessToken=generateAccessToken(user)
 const refreshToken= jwt.sign(user,process.env.REFRESH_TOKEN_SECRET)//HANDLE REFRESH MANUALLY
 
-refreshToken.push(refreshToken) //record of refreshToken
+refreshTokens.push(refreshToken) //record of refreshToken
 res.json({accessToken:accessToken,refreshToken:refreshToken}) // accessToken will have user info
  
 
 }) 
 
+app.delete('/logout', (req,res)=>{
+	refreshTokens = refreshTokens.filter(token => token == Request.body.token)
+	res.sendStatus(204)
+})
+
 //create a function that generates an access tokenand expires in () seconds
 const generateAccessToken= (user)=>{
-	return jwt.sign(user,process.env.ACCESS_TOKEN_SECRET_KEY,{expiresIn: '15s'})
+	return jwt.sign(user,process.env.ACCESS_TOKEN_SECRET_KEY,{expiresIn: '45s'})
 }
 
 /* app.get("/user/validateToken", (req, res) => {
