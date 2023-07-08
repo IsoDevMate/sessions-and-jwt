@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon server.js",
+    "devstart": "nodemon index.js",
     "devStartAuth": "nodemon authserver.js",
+    "devStartSession": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -18,6 +19,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.1.3",
     "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.0"
+    "express-sessions": "^1.0.6",
+    "jsonwebtoken": "^9.0.0",
+    "uuid": "^9.0.0"
   }
 }
