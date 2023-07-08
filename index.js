@@ -13,9 +13,6 @@ const posts = [{
     password:'not_hashed'
 }]
 app.use(express.json())
-app.listen(port, ()=>{
-    console.log(`server is running on port ${port}`)
-})
 
 
  const authenticateToken = (req,res,next)=>{
@@ -32,4 +29,7 @@ jwt.verify(token,process.env.ACCESS_TOKEN_SECRET_KEY,(err,user)=>{
  app.get('/posts', authenticateToken, (req,res)=>{
     res.json(posts.filter(post =>post.username === req.user.name))//return post that user has access to 
   
+})
+app.listen(port, ()=>{
+    console.log(`server is running on port ${port}`)
 })

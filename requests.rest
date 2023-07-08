@@ -1,6 +1,6 @@
 
 GET http://localhost:5003/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYmFybyIsImlhdCI6MTY4NTk4NzY0MywiZXhwIjoxNjg1OTg3Njg4fQ.mZV_MK1NLIV_clwRXAYnRJ1v2bvboFj8D2w7R5VkgfI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYmFybyIsImlhdCI6MTY4ODgwMjE0MiwiZXhwIjoxNjg4ODAyMTg3fQ.AUVoLsIfdR7msgtnqDb_qIlj4KldL1UDZtlkDgyseAA
 
 ###
 
@@ -8,7 +8,7 @@ DELETE http://localhost:5004/logout
 Content-Type: application/json
 {
     "token":
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYmFybyIsImlhdCI6MTY4NTk4NzQ1NSwiZXhwIjoxNjg1OTg3NTAwfQ.UWYeXrNzbBtpYG_dfLhSv1A2v6jicO_OcukFncF09ME"
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYmFybyIsImlhdCI6MTY4ODgwMjA4NiwiZXhwIjoxNjg4ODAyMTMxfQ.DVNlcQWWZ9XbyFfD0KPwAXsNdRwtfxGxnfncHorRoqQ"
 }
 
 ###
@@ -16,7 +16,7 @@ POST  http://localhost:5004/token
 Content-Type: application/json
 {
     "token":
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYmFybyIsImlhdCI6MTY4NTk4NzQ1NX0.OXZLIqEyEER30hyv77DzyPicyw9YFCBJNxzjUBOlltU"
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYmFybyIsImlhdCI6MTY4ODgwMjE0Mn0.MUsjcWSm8-3zpwr2JWMWmWk4e80Fa7rTR_PqEjRKF08"
     
 }
 ###
